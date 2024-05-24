@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Add this to ensure padding and border are included in the element's total width and height */
 }
 
 body {
@@ -60,6 +61,11 @@ a:hover {
 
 .logo {
   font-size: 2rem;
+}
+
+.paragraph {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .logo:hover {
@@ -134,23 +140,11 @@ a:hover {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
 /* SECTIONS */
 
 section {
   padding-top: 4vh;
-  height: 96vh;
+  padding-bottom: 4vh; /* Add padding-bottom to ensure there's space below each section */
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -158,6 +152,7 @@ section {
 
 .section-container {
   display: flex;
+  flex-direction: column; /* Ensure the content stacks vertically */
 }
 
 /* PROFILE SECTION */
@@ -166,7 +161,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
+  min-height: 80vh; /* Change height to min-height */
 }
 
 .section__pic-container {
@@ -366,8 +361,9 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  max-width: 60%;
+  width: 100%;
+  height: auto;
 }
 
 .project-title {
@@ -386,7 +382,7 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  min-height: 70vh; /* Change height to min-height */
 }
 
 .contact-info-upper-container {
@@ -395,7 +391,7 @@ article .icon {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  background: rgb(250, 250, 250); /* Corrected syntax */
   margin: 2rem auto;
   padding: 0.5rem;
 }
