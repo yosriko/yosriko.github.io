@@ -339,15 +339,32 @@ section {
 
 article {
   display: flex;
-  width: 10rem;
+  width: 15rem;
   justify-content: space-around;
-  gap: 0.5rem;
+  gap: 1rem;
+}
+
+.article2 {
+  display: flex;
+  width: 16rem;
+  justify-content: space-around;
+  gap: 1rem;
 }
 
 article .icon {
   cursor: default;
 }
 
+.link{
+  text-decoration: underline;
+  color: blue;
+  font-style: italic;
+}
+
+.justice{
+  text-align: left;
+
+}
 /* PROJECTS SECTION */
 
 #projects {
