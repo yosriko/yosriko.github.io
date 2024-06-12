@@ -337,6 +337,33 @@ section {
   justify-content: space-around;
 }
 
+.details-container.color-container {
+  width: 100%; /* Adjust to desired width */
+  max-width: 100%; /* Set a max-width if needed */
+  margin: 1rem auto; /* Center within parent and add vertical margin */
+  padding: 2rem; /* Optional: Increase padding for better content spacing */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow for better separation */
+}
+
+.article-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-img {
+  width: 200px; /* Ensure the image takes full width of its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+@media (min-width: 768px) {
+  .about-containers {
+    flex-wrap: wrap; /* Allow wrapping on larger screens */
+    justify-content: space-around; /* Adjust alignment */
+  }
+}
+
+
 article {
   display: flex;
   width: 15rem;
@@ -443,3 +470,35 @@ footer {
 footer p {
   text-align: center;
 }
+
+
+.scrollable-paragraph {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  max-height: 200px; /* Adjust height as necessary */
+  padding-right: 10px;
+  margin-bottom: 30px;
+}
+
+.scrollable-paragraph p {
+  margin: 0;
+  padding: 0;
+}
+
+.about-containers-self {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust 300px to the minimum width you want for each column */
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 1000px) {
+  .about-containers-self {
+    grid-template-columns: repeat(3, 1fr); /* Limit to 3 columns on larger screens */
+    justify-content: space-around;
+  }
+}
+
+
+
